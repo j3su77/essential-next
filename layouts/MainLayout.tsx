@@ -1,5 +1,5 @@
-import Head from "next/head";
 import { FC, ReactNode } from "react";
+import Head from "next/head";
 
 interface Props {
   title: string;
@@ -9,7 +9,7 @@ interface Props {
 export const MainLayout: FC<Props> = ({ title, children }) => {
   <Head>
     <title>{title}</title>
-  </Head>;
+  </Head>
   return (
     <div style={{paddingBottom: ".5rem"}}>
       {children}

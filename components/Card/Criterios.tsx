@@ -1,13 +1,9 @@
 import {
   FC,
   useState,
-  useEffect,
-  ChangeEvent,
-  useRef,
-  DetailedHTMLProps,
-  InputHTMLAttributes,
+
 } from "react";
-import essentialApi from "../../api/essentialApi";
+
 import styles from "./criterios.module.css";
 
 interface Props {

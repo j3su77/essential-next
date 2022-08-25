@@ -1,9 +1,8 @@
 import React, { FC } from "react";
 
-import { CardHeader, CardFooter } from './';
-import { SeedAlfa } from '../../pages/alfasData';
+import { CardHeader, CardFooter } from "./";
 
-import styles from "./cardLayout.module.css"
+import styles from "./cardLayout.module.css";
 
 interface Props {
   tipo: string;
@@ -11,17 +10,13 @@ interface Props {
   children: React.ReactNode;
 }
 
-export const CardLayout: FC<Props> = ({tipo,nombre, children}) => {
+export const CardLayout: FC<Props> = ({ tipo, nombre, children }) => {
   return (
-    <div className={`${styles.card__container} ${tipo}__text-dark`} >
-     <CardHeader title={nombre} type={tipo}/>
-     <div className={styles.card__body}>
+    <div className={`${styles.card__container} ${tipo}__text-dark`}>
+      <CardHeader title={nombre} type={tipo} />
+      <div className={styles.card__body}>{children}</div>
 
-      {children}
-     </div>
-
-    <CardFooter  />
-
+      <CardFooter />
     </div>
-  )
-}
+  );
+};
