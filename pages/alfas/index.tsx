@@ -1,8 +1,9 @@
+import { FC } from "react";
 import { GetStaticProps } from "next";
+
 import { AlfaBar } from "../../components/AlfaBar";
 import { MainLayout } from "../../layouts/MainLayout";
 import essentialApi from "../../api/essentialApi";
-import { FC } from "react";
 
 interface Props {
   data: any;
