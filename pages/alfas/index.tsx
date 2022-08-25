@@ -21,8 +21,6 @@ const AlfasPage: FC<Props> = ({ data }) => {
               ? "personalizacion"
               : alfa.nombre == "Requisitos" || alfa.nombre == "Sistema Software"
               ? "solucion"
-              : alfa.nombre == "Riesgos"
-              ? "riesgos"
               : "gestion"
           }
           percent={75}

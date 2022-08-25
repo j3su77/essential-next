@@ -14,9 +14,10 @@ interface Props {
   data: any;
   numEstados: number;
   tipo: string;
+  index: number
 }
 
-export const Criterios: FC<Props> = ({ data, numEstados, tipo }) => {
+export const Criterios: FC<Props> = ({ data, numEstados, tipo, index }) => {
   const [num] = useState(data[0].id_estado);
   const [nombre] = useState(data[0].nombre);
 
@@ -47,7 +48,7 @@ export const Criterios: FC<Props> = ({ data, numEstados, tipo }) => {
         </div>
       ))}
       <div className={`${styles.indicador} ${tipo}__light`}>
-        <h2 className={styles.indicador__text}>{`${num}/${numEstados}`}</h2>
+        <h2 className={styles.indicador__text}>{`${index}/${numEstados}`}</h2>
       </div>
     </>
   );

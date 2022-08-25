@@ -6,13 +6,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
-   
+
 }
 .title {
     font-size: 30px;
     font-weight: bold;
     text-transform: capitalize;
+    justify-self: center !important;
+    text-align: center;
 }
 
 

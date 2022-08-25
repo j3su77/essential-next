@@ -34,23 +34,51 @@ const EstadosPage: FC<Props> = ({ num, data }) => {
     setItemSelected(numItem);
 
     setIndentificadaData(
-      data.filter((criterio: any) => criterio.id_estado == 1).sort(function(a: any, b: any){return a.id - b.id})
+      data
+        .filter((criterio: any) => criterio.id_estado == 1)
+        .sort(function (a: any, b: any) {
+          return a.id - b.id;
+        })
     );
 
     setConSolucionRequeridaData(
-      data.filter((criterio: any) => criterio.id_estado == 2).sort(function(a: any, b: any){return a.id - b.id})
+      data
+        .filter((criterio: any) => criterio.id_estado == 2)
+        .sort(function (a: any, b: any) {
+          return a.id - b.id;
+        })
     );
 
     setconValorEstablecidoData(
-      data.filter((criterio: any) => criterio.id_estado == 3).sort(function(a: any, b: any){return a.id - b.id})
+      data
+        .filter((criterio: any) => criterio.id_estado == 3)
+        .sort(function (a: any, b: any) {
+          return a.id - b.id;
+        })
     );
 
-    setViableData(data.filter((criterio: any) => criterio.id_estado == 4).sort(function(a: any, b: any){return a.id - b.id}));
+    setViableData(
+      data
+        .filter((criterio: any) => criterio.id_estado == 4)
+        .sort(function (a: any, b: any) {
+          return a.id - b.id;
+        })
+    );
 
-    setTratadaData(data.filter((criterio: any) => criterio.id_estado == 5).sort(function(a: any, b: any){return a.id - b.id}));
+    setTratadaData(
+      data
+        .filter((criterio: any) => criterio.id_estado == 5)
+        .sort(function (a: any, b: any) {
+          return a.id - b.id;
+        })
+    );
 
     setConBeneficioAcumuladoData(
-      data.filter((criterio: any) => criterio.id_estado == 6).sort(function(a: any, b: any){return a.id - b.id})
+      data
+        .filter((criterio: any) => criterio.id_estado == 6)
+        .sort(function (a: any, b: any) {
+          return a.id - b.id;
+        })
     );
 
     setIsLoading(false);
@@ -73,20 +101,24 @@ const EstadosPage: FC<Props> = ({ num, data }) => {
         ""
       ) : (
         <div style={{ margin: "auto" }}>
-     
-
-      <ButtonBack text="atras" link="/alfas/oportunidad" />
+          <ButtonBack text="atras" link="/alfas/oportunidad" />
 
           <Slider {...settings}>
             <CardLayout tipo="personalizacion" nombre="Oportunidad">
-              <Criterios data={indentificadaData} tipo="personalizacion" numEstados={6} />
+              <Criterios
+                data={indentificadaData}
+                tipo="personalizacion"
+                numEstados={6}
+                index={1}
+              />
             </CardLayout>
 
             <CardLayout tipo="personalizacion" nombre="Oportunidad">
               <Criterios
                 data={conSolucionRequeridaData}
                 tipo="personalizacion"
-                 numEstados={6} 
+                numEstados={6}
+                index={2}
               />
             </CardLayout>
 
@@ -94,23 +126,35 @@ const EstadosPage: FC<Props> = ({ num, data }) => {
               <Criterios
                 data={conValorEstablecidoData}
                 tipo="personalizacion"
-                 numEstados={6} 
+                numEstados={6}
+                index={3}
               />
             </CardLayout>
 
             <CardLayout tipo="personalizacion" nombre="Oportunidad">
-              <Criterios data={viableData}  tipo="personalizacion" numEstados={6}  />
+              <Criterios
+                data={viableData}
+                tipo="personalizacion"
+                numEstados={6}
+                index={4}
+              />
             </CardLayout>
 
             <CardLayout tipo="personalizacion" nombre="Oportunidad">
-              <Criterios data={tratadaData}  tipo="personalizacion" numEstados={6}  />
+              <Criterios
+                data={tratadaData}
+                tipo="personalizacion"
+                numEstados={6}
+                index={5}
+              />
             </CardLayout>
 
             <CardLayout tipo="personalizacion" nombre="Oportunidad">
               <Criterios
                 data={conBeneficioAcumuladoData}
                 tipo="personalizacion"
-                 numEstados={6} 
+                numEstados={6}
+                index={6}
               />
             </CardLayout>
           </Slider>

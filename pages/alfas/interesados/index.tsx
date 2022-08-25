@@ -12,21 +12,21 @@ interface Props {
   data: any;
 }
 
-const OportunidadTransitionPage: FC<Props> = ({ data }) => {
+const InteresadosTransitionPage: FC<Props> = ({ data }) => {
 
 
   return (
     <MainLayout title="alfas">
       <ButtonBack text="atras" link="/alfas" />
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <CardLayout tipo="personalizacion" nombre="opurtunidad">
+        <CardLayout tipo="personalizacion" nombre="interesados">
           <p className={styles.descripcion}>
-           Conjunto de circunstancias que, en <strong >entorno</strong> a un <strong>resultado/Sdl</strong>, justifican el <strong>esfuerzo</strong>, afectan a los <strong>interesados</strong> y permiten enfocar los <strong>requisitos</strong>
+          <strong >Organizaciones</strong>, grupos o<strong>persona</strong> que afectan o se ven afectados por un <strong>resultado/Sdl</strong> o<strong> esfuerzo</strong>(<strong>equipo</strong> además se considera aparte)
           </p>
 
           <div>
             {data.map((state:any, index: number) => (
-              <StateBar key={state.id} state={state.nombre} name="oportunidad" index={index} />
+              <StateBar key={state.id} state={state.nombre} name="interesados" index={index} />
             ))}
           </div>
         </CardLayout>
@@ -35,12 +35,12 @@ const OportunidadTransitionPage: FC<Props> = ({ data }) => {
   );
 };
 
-export default OportunidadTransitionPage;
+export default InteresadosTransitionPage;
 
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { data } = await essentialApi.get("/estados", {
-    data: { id_alfa: 1 },
+    data: { id_alfa: 2 },
   });
 
     console.log({ estados: data });

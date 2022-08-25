@@ -19,7 +19,7 @@ export const StateBar: FC<Props> = ({ state, name, index }) => {
 
       <div className={styles.statebar__container} >
 
-        <h3 className={styles.text}>{state}</h3>
+        <h3 className={styles.text}>{state.toLowerCase()}</h3>
 
       </div>
     </Link>

@@ -1,32 +1,34 @@
 import { FC } from "react";
-import {  GetStaticProps } from "next";
+import { GetStaticProps } from "next";
 import { ButtonBack, CardLayout, StateBar } from "../../../components";
 import { MainLayout } from "../../../layouts/MainLayout";
 
-
-
 import styles from "../../../styles/TransitionPage.module.css";
-import essentialApi from '../../../api/essentialApi';
+import essentialApi from "../../../api/essentialApi";
 
 interface Props {
   data: any;
 }
 
-const OportunidadTransitionPage: FC<Props> = ({ data }) => {
-
-
+const TrabajoTransitionPage: FC<Props> = ({ data }) => {
   return (
     <MainLayout title="alfas">
       <ButtonBack text="atras" link="/alfas" />
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <CardLayout tipo="personalizacion" nombre="opurtunidad">
+        <CardLayout tipo="gestion" nombre="trabajo">
           <p className={styles.descripcion}>
-           Conjunto de circunstancias que, en <strong >entorno</strong> a un <strong>resultado/Sdl</strong>, justifican el <strong>esfuerzo</strong>, afectan a los <strong>interesados</strong> y permiten enfocar los <strong>requisitos</strong>
+            <strong>Actividad</strong> que al realizarse implica <strong>riesgos</strong> y una <strong>acción</strong> mental o física, logrando un<strong>progreso</strong> en el <strong>esfuerzo</strong> (<i>qué</i>)
+            
           </p>
 
           <div>
-            {data.map((state:any, index: number) => (
-              <StateBar key={state.id} state={state.nombre} name="oportunidad" index={index} />
+            {data.map((state: any, index: number) => (
+              <StateBar
+                key={state.id}
+                state={state.nombre}
+                name="trabajo"
+                index={index}
+              />
             ))}
           </div>
         </CardLayout>
@@ -35,15 +37,14 @@ const OportunidadTransitionPage: FC<Props> = ({ data }) => {
   );
 };
 
-export default OportunidadTransitionPage;
-
+export default TrabajoTransitionPage;
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { data } = await essentialApi.get("/estados", {
-    data: { id_alfa: 1 },
+    data: { id_alfa: 7 },
   });
 
-    console.log({ estados: data });
+  console.log({ estados: data });
 
   if (!data) {
     return {
@@ -53,7 +54,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       },
     };
   }
-
 
   return {
     props: {
