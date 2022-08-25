@@ -1,0 +1,82 @@
+
+:root {
+  --personalizacion-light-color: #C9FFC9 ;
+  --personalizacion-dark-color: #3DA749 ;
+
+  --solucion-light-color: #FFFF99 ;
+  --solucion-dark-color: #E97000 ;
+
+  --gestion-light-color: #C6D9F1 ;
+  --gestion-dark-color: #4C6FC6 ;
+
+  --riesgos-light-color: #b9b9b9 ;
+  --riesgos-dark-color: #616161 ;
+
+}
+
+
+  
+  .personalizacion__dark {
+    background-color: var(--personalizacion-dark-color);
+  }
+  .personalizacion__light {
+    background-color: var(--personalizacion-light-color);
+  }
+  .personalizacion__text-dark {
+    color: var( --personalizacion-dark-color);
+  }
+  .personalizacion__text-light {
+    color: var(--personalizacion-light-color);
+  }
+  
+  
+  
+  
+  
+
+  
+  .solucion__dark {
+    background-color: var(--solucion-dark-color);
+  }
+  .solucion__light {
+    background-color: var(--solucion-light-color);
+  }
+  .solucion__text-dark {
+    color:  var(--solucion-dark-color);
+  }
+  .solucion__text-light {
+    color: var(--solucion-light-color);
+  }
+  
+  
+  
+  
+
+  .gestion__dark {
+    background-color: var(--gestion-dark-color);
+  }
+  .gestion__light {
+    background-color: var(--gestion-light-color);
+  }
+  .gestion__text-dark {
+    color: var(--gestion-dark-color);
+  }
+  .gestion__text-light {
+    color: var(--gestion-light-color);
+  }
+
+
+  .riesgos__dark {
+    background-color: var(--riesgos-dark-color);
+  }
+  .riesgos__light {
+    background-color: var(--riesgos-light-color);
+  }
+  .riesgos__text-dark {
+    color: var(--riesgos-dark-color);
+  }
+  .riesgos__text-light {
+    color: var(--riesgos-light-color);
+  }
+  
+  

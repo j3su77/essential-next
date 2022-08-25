@@ -1,0 +1,20 @@
+
+.footer__container {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    background-color: transparent;
+    padding: 0 1.6rem;
+}
+
+
+.footer__version {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    color: var(--text-color);
+    margin-right: 1rem;
+}

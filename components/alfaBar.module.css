@@ -1,0 +1,56 @@
+.baralpha__container {
+  padding: 0 0.5rem 1rem 0.5rem;
+  margin: 0.3rem 0.2rem;
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid;
+
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(145, 145, 145, 1);
+  -moz-box-shadow: 0px 2px 2px 0px rgba(145, 145, 145, 1);
+  box-shadow: 0px 2px 2px 0px rgba(145, 145, 145, 1);
+}
+
+.baralpha__title {
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+.baralpha__percent {
+  width: 90%;
+  height: 2.5rem;
+  position: relative;
+  background: #fff;
+  border-radius: 0.7rem;
+  padding: 10px;
+}
+
+.baralpha__progress {
+  display: flex;
+  height: 3.2rem;
+  justify-content: center;
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+  border-top-left-radius: 0.7rem;
+  border-bottom-left-radius: 0.7rem;
+  position: absolute;
+  overflow: hidden;
+  top: -0.3rem;
+  left: 0;
+  z-index: 2;
+}
+
+.baralpha__number {
+  text-align: center;
+  color: #1e1e1e;
+  font-size: 1.4rem;
+  font-weight: 700;
+  z-index: 1;
+  top: 0;
+  position: absolute;
+  z-index: 100;
+  margin-top: 0.3rem;
+}

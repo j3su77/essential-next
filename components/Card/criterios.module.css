@@ -1,0 +1,67 @@
+.criterio {
+  display: flex;
+  text-align: start;
+  line-height: 1.3rem;
+  margin: 1rem 0;
+}
+.check {
+  border-radius: 0;
+  align-self: flex-start;
+  margin-top: 0.1rem;
+  margin-right: 0.8rem;
+  width: 20px;
+  height: 20px;
+}
+
+.text__criterio {
+  color: #1e1e1e;
+  font-weight: 500;
+  margin-left: 0.7rem;
+}
+
+.number {
+  border-radius: 0.4rem;
+  padding: 0.4rem;
+  color: #1e1e1e;
+}
+
+.nameState {
+  width: 100%;
+  background-color: white;
+  border: 3px solid;
+  border-radius: 0.3rem;
+  margin-bottom: 0.7rem;
+  text-align: center;
+  padding: 0.3rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+.nameState__text {
+  color: var(--text-color) !important;
+  font-weight: var(--font-medium);
+  font-size: var(--h2-font-size);
+}
+
+.nameState__text::first-letter {
+  text-transform: capitalize;
+}
+
+.indicador {
+  border: 3px solid;
+  border-radius: 0.3rem;
+  text-align: center;
+  padding: 0.1rem;
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 70px;
+  right: 0px;
+  left: 0px;
+  margin: 0 25px;
+}
+
+.indicador__text {
+  color: var(--text-color) !important;
+  font-weight: var(--font-medium);
+  font-size: var(--h3-font-size);
+}
